@@ -1,0 +1,17 @@
+#include<stdio.h>
+#include<iostream>
+#include<float.h>
+using namespace std;
+
+	int main()
+	 {
+	int x=2.2;
+	short y=0x7FFF;
+	short z=0xFFF;
+	unsigned short w=0xFFF;
+	float u=0.177;
+	printf("%d\n%d\n%d\n%d\n%f\n",x,y,z,w,u);
+	cout <<"double类型的最大值和最小值"<<endl;
+	cout<<"DBL_MAX="<<DBL_MAX<<endl;
+	cout<<"DBL_MIN="<<DBL_MIN<<endl;
+} 
