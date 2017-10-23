@@ -1,0 +1,8 @@
+#include<stdio.h>
+int main(){
+	float a;
+    scanf("%f",&a);
+	int b=a;
+	float c=a-b;
+	printf("整数部分为%d,小数部分为%f",b,c);
+}
