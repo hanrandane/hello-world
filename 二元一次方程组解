@@ -1,0 +1,32 @@
+#include<stdio.h>
+int main(){
+	float a1,b1,c1,a2,b2,c2;
+	printf("请按格式输入：\na1X+b1Y=c1\na2X+b2Y=c2\n");
+	printf("a1=");
+	scanf("%f",&a1);
+	printf("b1=");
+	scanf("%f",&b1);
+	printf("c1=");
+	scanf("%f",&c1);	
+	printf("a2=");
+	scanf("%f",&a2);
+	printf("b2=");
+	scanf("%f",&b2);
+	printf("c2=");
+	scanf("%f",&c2);
+	if(a2*b1-a1*b2==0){
+		if(a2*c1-a1*c2==0){
+			printf("方程有无穷解");
+		}
+		else{
+			printf("方程无解");
+		} 
+	}
+	else{
+		float x1,x2;
+		x1=(a1*b1*c1-a1*b2*c1)/(a1*a2*b1-a1*a1*b2);
+		x2=(a2*c1-a1*c2)/(a2*b1-a1*b2);
+		printf("X=%f\nY=%f\n",x1,x2);
+	}
+
+} 
