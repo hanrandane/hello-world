@@ -1,39 +1,42 @@
 #include<stdio.h>
 int main(){
-	int k;
-	scanf("%d",&k);
-	for(int j=1;j<=k;j++){
-	int h;
-	scanf("%d",&h);
-	if(h==1){
-	   printf("ERROR\n");
-}
-	else{
-	int a[h];
-	for(int i=0;i<h;i++){
-		scanf("%d",&a[i]);
-	}
-	for(int m=0,n=1;m<h-1;m++,n++){
-		int q=m,p=n;
-	for(;q<h-1;q++,p++){
-		if(a[q]>a[p]){
-			int y=a[q];
-			a[q]=a[p];
-			a[p]=y;
+	int z;
+	scanf("%d",&z);
+	for(int r=1;r<=z;r=r+1){
+	    int m;
+		scanf("%d",&m);
+		if(m==1){
+			int a[1];
+			scanf("%d",&a[0]);
+			printf("ERROR\n");
 		}
+		else{
+		int a[m];
+		for(int j=0;j<m;j++){
+			scanf("%d",&a[j]);
+		}
+		for(int y=0;y<m-1;y++){
+		for(int j=y+1;j<m;j++){
+			if(a[y]>a[j]){
+				int q=a[y];
+				a[y]=a[j];
+				a[j]=q;
+			}
+		}
+		}
+		if(a[0]==a[m-1]){
+			printf("ERROR\n");
+		}
+		else{
+		for(int j=0;j<m-1;j++){
+			if(a[j+1]>a[j]){
+				printf("%d\n",a[j+1]);
+				break;
+		    	}
+		   }
 	}
-}
-	if(a[h-2]==a[h-1]){
-		printf("ERROR\n");
 	}
-	else{
-	for(int w=0;w<h-1;w++){
-		if(a[w]<a[w+1]){
-		printf("%d",a[w+1]);
-		break;
-	    }
-	}
-}	
+	}	
 }
-}
-} 
+
+
