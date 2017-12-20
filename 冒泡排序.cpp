@@ -1,4 +1,4 @@
-#include<stdio.h>
+#include<stdio.h>  //冒泡排序是多次相邻比较 
 int main(){
 	int n;
 	scanf("%d",&n);
@@ -6,16 +6,16 @@ int main(){
 	for(int i=0;i<=n-1;i=i+1){
 		scanf("%d",&a[i]);
 	}
-	for(int i=n-1;i>=1;i=i-1){
-		for(int j=i-1;j>=0;j=j-1){
-			if(a[i]<a[j]){
-				int zhong=a[i];
-				a[i]=a[j];
+	for(int i=0;i<n-1;i++){
+	for(int k=0,j=1;j<n;k++,j++){
+			if(a[k]>a[j]){
+				int zhong=a[k];
+				a[k]=a[j];
 				a[j]=zhong;
 			}
 	    }
-	   for(int k=0;k<=n-1;k=k+1){
-	      printf("%d ",a[k]);
+	   for(int m=0;m<=n-1;m++){
+	      printf("%d ",a[m]);
 	   }
 	   printf("\n");
 	}

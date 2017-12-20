@@ -12,8 +12,10 @@ int main(){
 	int s=0;
 	int s0=0;
 	for(int i=1;i<=n;i++){
-		s=s+n*q(i);
+		s=s+a*q(i);
 		s0=s0+s;
 	}
 	printf("%d",s0);
+	printf("\n");
+	return 0;
 }
